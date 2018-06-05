@@ -17,4 +17,7 @@ with open('./cache.txt', 'r') as cache:
 line = linecache.getline('./parsedlyrics.csv', random.randrange(0, totalLines))
 
 if isinstance(line, str) == True and line != '':
+    line = "\"" + line.strip('\n') + "\""
+    
     status = api.PostUpdate(line)
+    print(line)
