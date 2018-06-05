@@ -1,3 +1,4 @@
 /lyrics
-\nparsedlyrics.csv
-\ncache.txt
+parsedlyrics.csv
+cache.txt
+SECRETS.ENV
