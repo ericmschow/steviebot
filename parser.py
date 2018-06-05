@@ -9,6 +9,8 @@ def tagFilter(tag):
 def classFilter(class_):
     return class_ != 'thanks' and class_ != 'note'
 
+totalLineCount = 0;
+
 for filename in os.listdir('lyrics'):
     with open('./lyrics/' + filename) as fh:
         soup = BeautifulSoup(fh, 'html.parser', parse_only=onlyLyricsDiv)
@@ -30,6 +32,8 @@ for filename in os.listdir('lyrics'):
     f.writelines(delimitedLines)
     f.close()
 
-    cache = open('cache.txt', 'w', encoding='utf-8')
-    cache.write(str(len(delimitedLines)))
-    cache.close()
+    totalLineCount += len(delimitedLines)
+
+cache = open('cache.txt', 'w', encoding='utf-8')
+cache.write(str(totalLineCount))
+cache.close()
