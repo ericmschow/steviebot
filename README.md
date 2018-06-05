@@ -1,5 +1,5 @@
 # steviebot
-Twitter bot that posts random Steven Wilson lyrics.
+Twitter bot that posts random Steven Wilson lyrics. See it in action [here](https://twitter.com/StevenWilsonBo1).
 
 Created because I've been focused on Javascript for the past year or so, and I wanted to brush up on my Python.
 
