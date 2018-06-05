@@ -26,7 +26,12 @@ for filename in os.listdir('lyrics'):
     splitLines = filter(lambda x: x != '', content.split('\n'))
     delimitedLines = []
     for line in splitLines:
-        delimitedLines.append(line + '\n')
+        line = line.strip()
+        line = line[0].upper() + line[1:]
+        if line[-1] == ',':
+            line = line[0:-1]
+
+        delimitedLines.append(line.strip() + '\n')
 
     f = open('parsedlyrics.csv', 'a', encoding='utf-8')
     f.writelines(delimitedLines)
